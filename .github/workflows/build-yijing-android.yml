@@ -50,6 +50,30 @@ jobs:
             echo "Android SDK was not found on this runner." >&2
             exit 1
           fi
+
+          # Bubblewrap's SDK-path validation expects the older tools/ layout.
+          # Recent Android SDKs use cmdline-tools/<version>/ instead. Expose the
+          # installed command-line tools through the compatibility path Bubblewrap
+          # checks, without changing any actual SDK files.
+          if [ ! -x "$SDK_PATH/tools/bin/sdkmanager" ] && [ ! -x "$SDK_PATH/bin/sdkmanager" ]; then
+            SDKMANAGER=""
+            for candidate in "$SDK_PATH"/cmdline-tools/*/bin/sdkmanager; do
+              if [ -x "$candidate" ]; then
+                SDKMANAGER="$candidate"
+              fi
+            done
+            if [ -z "$SDKMANAGER" ]; then
+              echo "Could not find sdkmanager under $SDK_PATH." >&2
+              exit 1
+            fi
+            if [ ! -e "$SDK_PATH/tools" ]; then
+              ln -s "$(dirname "$(dirname "$SDKMANAGER")")" "$SDK_PATH/tools"
+            else
+              echo "SDK has a tools directory but no sdkmanager at the expected path." >&2
+              exit 1
+            fi
+          fi
+
           mkdir -p "$HOME/.bubblewrap"
           SDK_PATH="$SDK_PATH" node -e 'const fs=require("node:fs"); fs.writeFileSync(process.env.HOME + "/.bubblewrap/config.json", JSON.stringify({jdkPath: process.env.JAVA_HOME, androidSdkPath: process.env.SDK_PATH}, null, 2))'
           cat "$HOME/.bubblewrap/config.json"
