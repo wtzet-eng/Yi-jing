@@ -223,6 +223,18 @@ export default function App() {
             AI presence session
           </a>
         </div>
+        <div className="text-center mt-4">
+          <a
+            href="/privacy.html"
+            className={`text-sm underline underline-offset-4 ${
+              darkMode
+                ? "text-gray-400 hover:text-gray-200"
+                : "text-gray-500 hover:text-gray-800"
+            }`}
+          >
+            Privacy Policy
+          </a>
+        </div>
       </div>
     </div>
   );
