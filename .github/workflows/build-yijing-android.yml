@@ -51,6 +51,7 @@ jobs:
           spawn bubblewrap init --manifest=https://yijing.ai.studio/manifest.json --directory=android
 
           expect {
+            -re {Directory .* does not exist\. Do you want to create it now\?} { send "y\r"; exp_continue }
             -re {Domain:} { send "\r"; exp_continue }
             -re {URL path:} { send "\r"; exp_continue }
             -re {Application name:} { send "\r"; exp_continue }
