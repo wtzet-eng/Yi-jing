@@ -13,7 +13,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: yijing-android-bundle-${{ github.event_name }}
+  group: yijing-android-bundle
   cancel-in-progress: true
 
 jobs:
