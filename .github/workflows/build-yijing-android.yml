@@ -98,6 +98,9 @@ jobs:
         shell: bash
         run: |
           cd android
+          # Keep the bundle build's exit code as the pipeline status. The `yes`
+          # helper can receive SIGPIPE after Bubblewrap exits, which is harmless.
+          set +o pipefail
           yes | bubblewrap build --skipPwaValidation --skipSigning --manifest=twa-manifest.json
           test -s app/build/outputs/bundle/release/app-release.aab
 
