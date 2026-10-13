@@ -54,6 +54,21 @@ jobs:
           SDK_PATH="$SDK_PATH" node -e 'const fs=require("node:fs"); fs.writeFileSync(process.env.HOME + "/.bubblewrap/config.json", JSON.stringify({jdkPath: process.env.JAVA_HOME, androidSdkPath: process.env.SDK_PATH}, null, 2))'
           cat "$HOME/.bubblewrap/config.json"
 
+      - name: Prepare a temporary CI-only keystore to suppress interactive setup
+        shell: bash
+        run: |
+          # Bubblewrap asks to create a signing key during init even though this
+          # workflow deliberately builds an unsigned bundle. Create a disposable
+          # key on the runner so init stays non-interactive. It is never uploaded.
+          mkdir -p android
+          "$JAVA_HOME/bin/keytool" -genkeypair -noprompt \
+            -keystore android/android.keystore \
+            -storepass "temporary-ci-store-password" \
+            -keypass "temporary-ci-key-password" \
+            -alias android -keyalg RSA -keysize 2048 -validity 10000 \
+            -dname "CN=YiJing Temporary CI Key, OU=Build, O=Temporary, L=Local, ST=None, C=US" \
+            >/dev/null
+
       - name: Initialize the Android TWA project from the live PWA
         shell: bash
         run: |
