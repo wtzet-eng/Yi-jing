@@ -43,6 +43,18 @@ jobs:
           sudo apt-get install -y expect
           npm install --global @bubblewrap/cli
 
+          # Configure Bubblewrap non-interactively to use the JDK and SDK already
+          # installed on the GitHub runner, rather than opening its first-run wizard.
+          SDK_PATH="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-}}"
+          if [ -z "$SDK_PATH" ] || [ ! -d "$SDK_PATH" ]; then
+            echo "Android SDK was not found on this runner." >&2
+            exit 1
+          fi
+          mkdir -p "$HOME/.bubblewrap"
+          node -e 'const fs=require("node:fs"); fs.writeFileSync(process.env.HOME + "/.bubblewrap/config.json", JSON.stringify({jdkPath: process.env.JAVA_HOME, androidSdkPath: process.env.SDK_PATH}, null, 2))' \
+            SDK_PATH="$SDK_PATH"
+          cat "$HOME/.bubblewrap/config.json"
+
       - name: Initialize the Android TWA project from the live PWA
         shell: bash
         run: |
