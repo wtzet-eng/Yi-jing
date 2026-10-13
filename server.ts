@@ -1,4 +1,6 @@
 import express from "express";
+import fs from "node:fs/promises";
+import path from "node:path";
 import { createServer as createViteServer } from "vite";
 import { GoogleGenAI } from "@google/genai";
 import dotenv from "dotenv";
@@ -10,6 +12,25 @@ async function startServer() {
   const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 
   app.use(express.json());
+
+  // Serve the privacy policy directly instead of letting the SPA fallback handle it.
+  app.get("/privacy.html", async (_req, res) => {
+    const candidates = [
+      path.resolve("dist/privacy.html"),
+      path.resolve("public/privacy.html"),
+    ];
+
+    for (const filePath of candidates) {
+      try {
+        await fs.access(filePath);
+        return res.sendFile(filePath);
+      } catch {
+        // Try the next location; the page may be in the Vite build or source public directory.
+      }
+    }
+
+    return res.status(404).type("text/plain").send("Privacy policy page not found.");
+  });
 
   // API presence endpoint for the Yi Jing guide
   app.post("/api/presence", async (req, res) => {
