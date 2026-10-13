@@ -51,8 +51,7 @@ jobs:
             exit 1
           fi
           mkdir -p "$HOME/.bubblewrap"
-          node -e 'const fs=require("node:fs"); fs.writeFileSync(process.env.HOME + "/.bubblewrap/config.json", JSON.stringify({jdkPath: process.env.JAVA_HOME, androidSdkPath: process.env.SDK_PATH}, null, 2))' \
-            SDK_PATH="$SDK_PATH"
+          SDK_PATH="$SDK_PATH" node -e 'const fs=require("node:fs"); fs.writeFileSync(process.env.HOME + "/.bubblewrap/config.json", JSON.stringify({jdkPath: process.env.JAVA_HOME, androidSdkPath: process.env.SDK_PATH}, null, 2))'
           cat "$HOME/.bubblewrap/config.json"
 
       - name: Initialize the Android TWA project from the live PWA
