@@ -12,6 +12,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: yijing-android-bundle-${{ github.event_name }}
+  cancel-in-progress: true
+
 jobs:
   build-android:
     name: Build unsigned Trusted Web Activity bundle
@@ -43,7 +47,7 @@ jobs:
         shell: bash
         run: |
           cat > /tmp/init-bubblewrap.exp <<'EXPECT'
-          set timeout 900
+          set timeout 180
           spawn bubblewrap init --manifest=https://yijing.ai.studio/manifest.json --directory=android
 
           expect {
