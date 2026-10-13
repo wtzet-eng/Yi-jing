@@ -137,11 +137,10 @@ jobs:
         shell: bash
         run: |
           # Android Browser Helper 2.7.4 requires API 24; Bubblewrap's generated
-          # manifest still declares API 21. Update generated files only in this
+          # files still declare API 21. Update generated files only in this
           # temporary CI workspace so Gradle's manifest merger can proceed.
           python3 - <<'PY'
           from pathlib import Path
-          import re
 
           paths = [
               Path("android/app/src/main/AndroidManifest.xml"),
@@ -154,12 +153,14 @@ jobs:
                   continue
               text = path.read_text()
               updated = text.replace('android:minSdkVersion="21"', 'android:minSdkVersion="24"')
-              updated = re.sub(r'(minSdkVersion\\s*[=(]?\\s*)21\\b', r'\\g<1>24', updated)
+              updated = updated.replace("minSdkVersion 21", "minSdkVersion 24")
+              updated = updated.replace("minSdkVersion = 21", "minSdkVersion = 24")
+              updated = updated.replace("minSdkVersion=21", "minSdkVersion=24")
               if updated != text:
                   path.write_text(updated)
                   touched.append(str(path))
           manifest = Path("android/app/src/main/AndroidManifest.xml").read_text()
-          if re.search(r'minSdkVersion[^\\n]{0,12}21\\b', manifest):
+          if 'android:minSdkVersion="21"' in manifest or "minSdkVersion 21" in manifest:
               raise SystemExit("Minimum API is still 21 in AndroidManifest.xml")
           print("Updated generated minimum-API settings in:", ", ".join(touched) if touched else "no replacements needed")
           PY
