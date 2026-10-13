@@ -64,6 +64,7 @@ jobs:
             -re {Request geolocation permission\?} { send "\r"; exp_continue }
             -re {Key store location:} { send "\r"; exp_continue }
             -re {Key name:} { send "\r"; exp_continue }
+            -re {Do you want to create one now\?} { send "n\r"; exp_continue }
             eof {}
             timeout { puts stderr "Timed out while initializing Bubblewrap"; exit 1 }
           }
