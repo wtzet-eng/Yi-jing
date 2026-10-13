@@ -1,4 +1,4 @@
-const CACHE_NAME = "yijing-practice-v2";
+const CACHE_NAME = "yijing-practice-v3";
 const PRECACHE_ASSETS = [
   "/",
   "/index.html",
