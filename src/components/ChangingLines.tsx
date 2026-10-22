@@ -94,7 +94,7 @@ export default function ChangingLines({
               </Button>
               {text && (
                 <p className={`text-sm leading-relaxed ${darkMode ? "text-gray-400" : "text-gray-600"}`}>
-                  {text.split(".")[0]}.
+                  {text}
                 </p>
               )}
             </div>
