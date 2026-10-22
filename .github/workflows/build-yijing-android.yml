@@ -1,0 +1,196 @@
+name: Build YiJing Android App Bundle
+
+on:
+  push:
+    branches:
+      - chore/build-yijing-aab-20261013
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: yijing-android-bundle
+  cancel-in-progress: true
+
+jobs:
+  build-android:
+    name: Build unsigned Trusted Web Activity bundle
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Install build tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y expect
+          npm install --global @bubblewrap/cli
+
+          # Configure Bubblewrap non-interactively to use the JDK and SDK already
+          # installed on the GitHub runner, rather than opening its first-run wizard.
+          SDK_PATH="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-}}"
+          if [ -z "$SDK_PATH" ] || [ ! -d "$SDK_PATH" ]; then
+            echo "Android SDK was not found on this runner." >&2
+            exit 1
+          fi
+
+          # Bubblewrap's SDK-path validation expects the older tools/ layout.
+          # Recent Android SDKs use cmdline-tools/<version>/ instead. Expose the
+          # installed command-line tools through the compatibility path Bubblewrap
+          # checks, without changing any actual SDK files.
+          if [ ! -x "$SDK_PATH/tools/bin/sdkmanager" ] && [ ! -x "$SDK_PATH/bin/sdkmanager" ]; then
+            SDKMANAGER=""
+            for candidate in "$SDK_PATH"/cmdline-tools/*/bin/sdkmanager; do
+              if [ -x "$candidate" ]; then
+                SDKMANAGER="$candidate"
+              fi
+            done
+            if [ -z "$SDKMANAGER" ]; then
+              echo "Could not find sdkmanager under $SDK_PATH." >&2
+              exit 1
+            fi
+            if [ ! -e "$SDK_PATH/tools" ]; then
+              ln -s "$(dirname "$(dirname "$SDKMANAGER")")" "$SDK_PATH/tools"
+            else
+              echo "SDK has a tools directory but no sdkmanager at the expected path." >&2
+              exit 1
+            fi
+          fi
+
+          mkdir -p "$HOME/.bubblewrap"
+          SDK_PATH="$SDK_PATH" node -e 'const fs=require("node:fs"); fs.writeFileSync(process.env.HOME + "/.bubblewrap/config.json", JSON.stringify({jdkPath: process.env.JAVA_HOME, androidSdkPath: process.env.SDK_PATH}, null, 2))'
+          cat "$HOME/.bubblewrap/config.json"
+
+      - name: Prepare a temporary CI-only keystore to suppress interactive setup
+        shell: bash
+        run: |
+          # Bubblewrap asks to create a signing key during init even though this
+          # workflow deliberately builds an unsigned bundle. Create a disposable
+          # key on the runner so init stays non-interactive. It is never uploaded.
+          mkdir -p android
+          "$JAVA_HOME/bin/keytool" -genkeypair -noprompt \
+            -keystore android/android.keystore \
+            -storepass "temporary-ci-store-password" \
+            -keypass "temporary-ci-key-password" \
+            -alias android -keyalg RSA -keysize 2048 -validity 10000 \
+            -dname "CN=YiJing Temporary CI Key, OU=Build, O=Temporary, L=Local, ST=None, C=US" \
+            >/dev/null
+
+      - name: Initialize the Android TWA project from the live PWA
+        shell: bash
+        run: |
+          cat > /tmp/init-bubblewrap.exp <<'EXPECT'
+          set timeout 180
+          spawn bubblewrap init --manifest=https://yijing.ai.studio/manifest.json --directory=android
+
+          expect {
+            -re {Directory .* does not exist\.} { send "y\r"; exp_continue }
+            -re {Domain:} { send "\r"; exp_continue }
+            -re {URL path:} { send "\r"; exp_continue }
+            -re {Application name:} { send "\r"; exp_continue }
+            -re {Short name:} { send "\r"; exp_continue }
+            -re {Application ID:} { send "\r"; exp_continue }
+            -re {Starting version code for the new app version:} { send "\r"; exp_continue }
+            -re {Display mode:} { send "\r"; exp_continue }
+            -re {Orientation:} { send "\r"; exp_continue }
+            -re {Status bar color:} { send "\r"; exp_continue }
+            -re {Splash screen color:} { send "\r"; exp_continue }
+            -re {Icon URL:} { send "\r"; exp_continue }
+            -re {Maskable icon URL:} { send "\r"; exp_continue }
+            -re {Monochrome icon URL:} { send "\r"; exp_continue }
+            -re {Include support for Play Billing\?} { send "\r"; exp_continue }
+            -re {Request geolocation permission\?} { send "\r"; exp_continue }
+            -re {Key store location:} { send "\r"; exp_continue }
+            -re {Key name:} { send "\r"; exp_continue }
+            -re {Do you want to create one now\?} { send "n\r"; exp_continue }
+            eof {}
+            timeout { puts stderr "Timed out while initializing Bubblewrap"; exit 1 }
+          }
+
+          set result [wait]
+          exit [lindex $result 3]
+          EXPECT
+
+          expect /tmp/init-bubblewrap.exp
+          test -f android/twa-manifest.json
+          node - <<'NODE'
+          const fs = require("node:fs");
+          const path = "android/twa-manifest.json";
+          const manifest = JSON.parse(fs.readFileSync(path, "utf8"));
+          manifest.packageId = "yijing.ai.studio";
+          fs.writeFileSync(path, JSON.stringify(manifest, null, 2) + "\n");
+          NODE
+          echo "Generated TWA manifest:"
+          node -e "const m=require('./android/twa-manifest.json'); console.log(JSON.stringify({name:m.name,launcherName:m.launcherName,packageId:m.packageId,host:m.host,startUrl:m.startUrl,appVersionCode:m.appVersionCode},null,2))"
+
+      - name: Set the minimum Android API required by the current TWA library
+        shell: bash
+        run: |
+          # Android Browser Helper 2.7.4 requires API 24; Bubblewrap's generated
+          # files still declare API 21. Update generated files only in this
+          # temporary CI workspace so Gradle's manifest merger can proceed.
+          python3 - <<'PY'
+          from pathlib import Path
+
+          paths = [
+              Path("android/app/src/main/AndroidManifest.xml"),
+              Path("android/app/build.gradle"),
+              Path("android/app/build.gradle.kts"),
+          ]
+          touched = []
+          for path in paths:
+              if not path.exists():
+                  continue
+              text = path.read_text()
+              updated = text.replace('android:minSdkVersion="21"', 'android:minSdkVersion="24"')
+              updated = updated.replace("minSdkVersion 21", "minSdkVersion 24")
+              updated = updated.replace("minSdkVersion = 21", "minSdkVersion = 24")
+              updated = updated.replace("minSdkVersion=21", "minSdkVersion=24")
+              if updated != text:
+                  path.write_text(updated)
+                  touched.append(str(path))
+          manifest = Path("android/app/src/main/AndroidManifest.xml").read_text()
+          if 'android:minSdkVersion="21"' in manifest or "minSdkVersion 21" in manifest:
+              raise SystemExit("Minimum API is still 21 in AndroidManifest.xml")
+          print("Updated generated minimum-API settings in:", ", ".join(touched) if touched else "no replacements needed")
+          PY
+
+      - name: Build the Android App Bundle without putting a signing key in CI
+        shell: bash
+        run: |
+          cd android
+          # Bubblewrap regenerates the Android project during build, so set the
+          # minimum SDK in its source manifest before regeneration.
+          node -e 'const fs=require("fs");const p="twa-manifest.json";const m=JSON.parse(fs.readFileSync(p));m.minSdkVersion=24;fs.writeFileSync(p,JSON.stringify(m,null,2)+"\n")'
+          # Keep the bundle build's exit code as the pipeline status. The `yes`
+          # helper can receive SIGPIPE after Bubblewrap exits, which is harmless.
+          set +o pipefail
+          printf "y\n" | bubblewrap build --skipPwaValidation --skipSigning --manifest=twa-manifest.json
+          test -s app/build/outputs/bundle/release/app-release.aab
+
+      - name: Upload Android bundle and packaging metadata
+        uses: actions/upload-artifact@v4
+        with:
+          name: yijing-android-bundle-unsigned
+          path: |
+            android/app/build/outputs/bundle/release/app-release.aab
+            android/twa-manifest.json
+          if-no-files-found: error
+          retention-days: 7
