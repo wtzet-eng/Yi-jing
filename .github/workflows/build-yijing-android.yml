@@ -176,6 +176,9 @@ jobs:
         shell: bash
         run: |
           cd android
+          # Bubblewrap regenerates the Android project during build, so set the
+          # minimum SDK in its source manifest before regeneration.
+          node -e 'const fs=require("fs");const p="twa-manifest.json";const m=JSON.parse(fs.readFileSync(p));m.minSdkVersion=24;fs.writeFileSync(p,JSON.stringify(m,null,2)+"\n")'
           # Keep the bundle build's exit code as the pipeline status. The `yes`
           # helper can receive SIGPIPE after Bubblewrap exits, which is harmless.
           set +o pipefail
