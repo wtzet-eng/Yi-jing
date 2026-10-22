@@ -130,6 +130,13 @@ jobs:
 
           expect /tmp/init-bubblewrap.exp
           test -f android/twa-manifest.json
+          node - <<'NODE'
+          const fs = require("node:fs");
+          const path = "android/twa-manifest.json";
+          const manifest = JSON.parse(fs.readFileSync(path, "utf8"));
+          manifest.packageId = "yijing.ai.studio";
+          fs.writeFileSync(path, JSON.stringify(manifest, null, 2) + "\n");
+          NODE
           echo "Generated TWA manifest:"
           node -e "const m=require('./android/twa-manifest.json'); console.log(JSON.stringify({name:m.name,launcherName:m.launcherName,packageId:m.packageId,host:m.host,startUrl:m.startUrl,appVersionCode:m.appVersionCode},null,2))"
 
