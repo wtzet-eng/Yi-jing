@@ -37,6 +37,7 @@ export function useServiceWorker() {
       navigator.serviceWorker
         .register("/sw.js")
         .then((reg) => {
+          reg.update().catch(() => {});
           // If updated sw is available, update it
           reg.onupdatefound = () => {
             const installing = reg.installing;
