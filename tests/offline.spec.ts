@@ -70,15 +70,17 @@ test('all 384 lines remain present and 375 match verified English descriptions',
   expect(sources.missingEnglishLines).toHaveLength(9);
 });
 
-test('first visit saves complete app, then offline reopening, casting and practice work', async ({ page, context }) => {
+test('first visit saves complete app, then offline reopening, casting and practice work', async ({ page, context, browserName }) => {
   const errors: string[] = [];
   page.on('pageerror', error => errors.push(error.message));
   await page.goto(origin);
   await expect(page.getByRole('status')).toHaveText('Ready for offline use');
   // Chromium's actual installability checks, including manifest icons and worker.
-  const cdp = await context.newCDPSession(page);
-  const result = await cdp.send('Page.getInstallabilityErrors');
-  expect(result.installabilityErrors).toEqual([]);
+  if (browserName === 'chromium') {
+    const cdp = await context.newCDPSession(page);
+    const result = await cdp.send('Page.getInstallabilityErrors');
+    expect(result.installabilityErrors).toEqual([]);
+  }
   await page.close();
   await context.setOffline(true);
   const reopened = await context.newPage();
@@ -107,7 +109,7 @@ test('update waits for consent, preserves unrelated cache, and works offline', a
   const updateButton = page.getByRole('button', { name: /Update ready/ });
   await expect(updateButton).toBeVisible();
   expect(await page.evaluate(() => caches.keys())).toContain('yijing-offline-test-first');
-  await updateButton.click();
+  await Promise.all([page.waitForEvent('load'), updateButton.click()]);
   await expect(page.getByRole('status')).toHaveText('Ready for offline use');
   await expect.poll(() => page.evaluate(() => caches.keys())).toEqual(expect.arrayContaining(['unrelated-cache', 'yijing-offline-test-second']));
   expect(await page.evaluate(() => caches.keys())).not.toContain('yijing-offline-test-first');
@@ -143,7 +145,7 @@ test('existing v3 worker migrates to a complete offline build', async ({ page, c
   });
   legacy = false;
   await page.evaluate(async () => (await navigator.serviceWorker.getRegistration())!.update());
-  await page.getByRole('button', { name: /Update ready/ }).click();
+  await Promise.all([page.waitForEvent('load'), page.getByRole('button', { name: /Update ready/ }).click()]);
   await expect(page.getByRole('status')).toHaveText('Ready for offline use');
   expect(await page.evaluate(() => caches.keys())).not.toContain('yijing-practice-v3');
   await context.setOffline(true);
