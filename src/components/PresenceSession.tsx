@@ -156,6 +156,7 @@ Begin with one sentence about the essence of Line ${changingLine} in Hexagram ${
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt }),
+        signal: AbortSignal.timeout(12000),
       });
       if (!res.ok) throw new Error("request failed");
       const data = (await res.json()) as { response: string };
@@ -234,6 +235,7 @@ Guide them through presence practice based on the wisdom of CHANGING LINE ${chan
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt }),
+        signal: AbortSignal.timeout(12000),
       });
       if (!res.ok) throw new Error("request failed");
       const data = (await res.json()) as { response: string };

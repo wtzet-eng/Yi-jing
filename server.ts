@@ -63,7 +63,15 @@ async function startServer() {
   });
 
   if (process.env.NODE_ENV === "production") {
-    app.use(express.static("dist"));
+    app.use(express.static("dist", {
+      setHeaders(res, filePath) {
+        if (filePath.endsWith("sw.js") || filePath.endsWith("index.html")) {
+          res.setHeader("Cache-Control", "no-cache");
+        }
+      },
+    }));
+    // Never return HTML in place of a missing script, image or API endpoint.
+    app.use(["/assets", "/api"], (_req, res) => res.sendStatus(404));
     app.get("*", (req, res) => {
       res.sendFile("dist/index.html", { root: "." });
     });

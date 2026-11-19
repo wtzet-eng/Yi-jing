@@ -7,7 +7,7 @@ import HexagramCard from "@/components/HexagramCard";
 import ChangingLines from "@/components/ChangingLines";
 import PresenceSession from "@/components/PresenceSession";
 import InstallButton from "@/components/InstallButton";
-import { useDarkMode, useServiceWorker } from "@/lib/hooks";
+import { useDarkMode, useServiceWorker, useOnlineStatus } from "@/lib/hooks";
 import { linesToHexagramNumber, transformedHexagramNumber } from "@/lib/casting";
 import { VIDEOS } from "@/data/videos";
 
@@ -20,7 +20,8 @@ function rollLine(): number {
 }
 
 export default function App() {
-  useServiceWorker();
+  const { offlineReady, offlineError, updateAvailable, applyUpdate } = useServiceWorker();
+  const online = useOnlineStatus();
   const { darkMode, toggleDarkMode } = useDarkMode();
   const [question, setQuestion] = useState("");
   const [isCasting, setIsCasting] = useState(false);
@@ -91,6 +92,17 @@ export default function App() {
             </button>
             <InstallButton darkMode={darkMode} />
           </div>
+          <p role="status" className="text-xs mt-3 text-gray-500">
+            {offlineReady ? (online ? "Ready for offline use" : "Offline — casting and readings are available")
+              : offlineError ? "Offline saving failed. Reconnect and reload to try again."
+              : "Open online and keep this page open until offline saving is complete."}
+          </p>
+          <p className="text-xs mt-1 text-gray-500">Videos and AI replies need internet. Basic presence practice works offline.</p>
+          {updateAvailable && (
+            <button onClick={applyUpdate} className="text-sm underline mt-2">
+              Update ready — reload when you have finished your reading
+            </button>
+          )}
         </motion.div>
 
         {!hexagramNumber && !isCasting && (
@@ -200,7 +212,7 @@ export default function App() {
                   : "bg-gray-800 hover:bg-gray-900 text-white"
               }`}
             >
-              <span>▶️</span> Watch Video
+              <span>▶️</span> {online ? "Watch Video" : "Watch Video (internet required)"}
             </a>
           </div>
         )}
@@ -220,7 +232,7 @@ export default function App() {
                 : "text-gray-700 hover:text-gray-900"
             }`}
           >
-            AI presence session
+            AI presence session{!online && " (internet required)"}
           </a>
         </div>
         <div className="text-center mt-4">

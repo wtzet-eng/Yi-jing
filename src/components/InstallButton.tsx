@@ -33,7 +33,7 @@ function DesktopInstructions({ darkMode, onClose }: Props & { onClose: () => voi
           </button>
         </div>
         <p className="text-xs text-gray-400 mb-4">
-          You can download and run this app offline like a desktop app directly from your browser.
+          In Chrome or Edge, install Yijing from the browser menu. In Safari on Mac, use File → Add to Dock. Firefox on Linux may not offer app installation; you can still use the website offline once it has finished saving.
         </p>
         <ol className="space-y-3.5 text-sm">
           <li className="flex items-start gap-3">
@@ -57,7 +57,7 @@ function DesktopInstructions({ darkMode, onClose }: Props & { onClose: () => voi
               2
             </span>
             <span>
-              Alternatively, open the browser menu (<strong>⋮</strong> or <strong>⋯</strong>) and click <strong>"Install Synchronicity Awareness Practice..."</strong> or <strong>"Save and Share" &rarr; "Create shortcut"</strong>.
+              Alternatively, open the browser menu (<strong>⋮</strong> or <strong>⋯</strong>) and click <strong>"Install Synchronicity Awareness Practice..."</strong> or <strong>"Cast, save and share" &rarr; "Install page as app"</strong>.
             </span>
           </li>
           <li className="flex items-start gap-3">
@@ -69,7 +69,7 @@ function DesktopInstructions({ darkMode, onClose }: Props & { onClose: () => voi
               3
             </span>
             <span>
-              Click <strong>"Install"</strong> to add it to your desktop / applications for fast offline access.
+              Click <strong>"Install"</strong> to add it to your desktop / applications then wait for “Ready for offline use” before disconnecting.
             </span>
           </li>
         </ol>
@@ -140,7 +140,7 @@ function AndroidInstructions({ darkMode, onClose }: Props & { onClose: () => voi
               3
             </span>
             <span>
-              Confirm by tapping <strong>"Install"</strong> for instant full-screen & offline access.
+              Confirm by tapping <strong>"Install"</strong> and wait for “Ready for offline use” before disconnecting.
             </span>
           </li>
         </ol>
@@ -202,7 +202,7 @@ function IosInstructions({ darkMode, onClose }: Props & { onClose: () => void })
               3
             </span>
             <span>
-              Tap <strong>"Add"</strong> in the top right corner. The app will launch like a native application!
+              Tap <strong>"Add"</strong> in the top right corner. Open the app while online and wait for “Ready for offline use”.
             </span>
           </li>
         </ol>
@@ -217,7 +217,7 @@ export default function InstallButton({ darkMode }: Props) {
   const [modalType, setModalType] = useState<"ios" | "android" | "desktop" | null>(null);
 
   useEffect(() => {
-    if (window.matchMedia("(display-mode: standalone)").matches) {
+    if (window.matchMedia("(display-mode: standalone)").matches || (navigator as Navigator & { standalone?: boolean }).standalone) {
       setInstalled(true);
       return;
     }
@@ -228,11 +228,16 @@ export default function InstallButton({ darkMode }: Props) {
       window.__installPrompt = e;
     };
     window.addEventListener("beforeinstallprompt", onPrompt);
-    window.addEventListener("appinstalled", () => {
+    const onInstalled = () => {
       setInstalled(true);
       window.__installPrompt = null;
-    });
-    return () => window.removeEventListener("beforeinstallprompt", onPrompt);
+      setInstallPrompt(null);
+    };
+    window.addEventListener("appinstalled", onInstalled);
+    return () => {
+      window.removeEventListener("beforeinstallprompt", onPrompt);
+      window.removeEventListener("appinstalled", onInstalled);
+    };
   }, []);
 
   const isIos = typeof navigator !== "undefined" && /iphone|ipad|ipod/i.test(navigator.userAgent);
@@ -249,6 +254,7 @@ export default function InstallButton({ darkMode }: Props) {
         const { outcome } = await evt.userChoice;
         if (outcome === "accepted") setInstalled(true);
         setInstallPrompt(null);
+        window.__installPrompt = null;
       } catch (err) {
         console.warn("Install prompt failed:", err);
       }

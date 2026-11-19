@@ -1,0 +1,805 @@
+{
+  "channel": "https://www.youtube.com/@yijing.ai.studio",
+  "channelId": "UC9QTapUbMxRfGbvflDQSFZw",
+  "checked": "2026-11-19",
+  "basis": "English changing-line text in video descriptions. Commentary and Chinese source text excluded. Whitespace and quotation formatting normalized; wording preserved. Missing English lines retain existing app text. Corrected the obvious typo “Steping” to “Stepping” in 10.5. Joined the multiline quotation in 53.5.",
+  "missingEnglishLines": [
+    {
+      "hexagram": 37,
+      "line": 3
+    },
+    {
+      "hexagram": 37,
+      "line": 4
+    },
+    {
+      "hexagram": 37,
+      "line": 5
+    },
+    {
+      "hexagram": 42,
+      "line": 6
+    },
+    {
+      "hexagram": 49,
+      "line": 1
+    },
+    {
+      "hexagram": 49,
+      "line": 2
+    },
+    {
+      "hexagram": 49,
+      "line": 4
+    },
+    {
+      "hexagram": 49,
+      "line": 5
+    },
+    {
+      "hexagram": 49,
+      "line": 6
+    }
+  ],
+  "sources": {
+    "1": {
+      "url": "https://www.youtube.com/watch?v=XSRiZQ3F96I",
+      "title": "Hexagram 1",
+      "lines": {
+        "1": "Hidden dragon, no need to act.",
+        "2": "The dragon appears on earth. It brings good fortune to see this great being.",
+        "3": "The superior man is diligent all day long; in the evening, he remains cautious as if in danger. Though there is peril, there will be no misfortune.",
+        "4": "Perhaps it will soar from the abyss, this is without fault.",
+        "5": "The flying dragon is in the sky; it is beneficial to see the great being.",
+        "6": "The high-soaring dragon doubts himself"
+      }
+    },
+    "2": {
+      "url": "https://www.youtube.com/watch?v=HRBTIDp_2hs",
+      "title": "Hexagram 2",
+      "lines": {
+        "1": "Treading on frost, solid ice will soon arrive.",
+        "2": "Straight, square and great (also honest, aligned with the principle and expansive). Without repeated practice, nothing is without benefit.",
+        "3": "Hiding brilliance leads to correctness; it allows one to assist the king in his duties. By avoiding recognition, one reaches true completion.",
+        "4": "Close the bag. No blame, no praise",
+        "5": "Yellow robe. Supreme good fortune",
+        "6": "Dragons battle in the wild. Their blood is black and yellow"
+      }
+    },
+    "3": {
+      "url": "https://www.youtube.com/watch?v=s3DJk_Rq6uk",
+      "title": "Hexagram 3",
+      "lines": {
+        "1": "Remain in place, grounded. Staying with what is right is beneficial. It is beneficial to appoint a leader.",
+        "2": "Hardship, wavering again and again. Riding a horse, yet hesitating. Not an enemy, but seeking union. Like a woman who does not marry—one does not commit, but after ten years, a commitment is made.",
+        "3": "Chasing a deer without a forest guide. One enters the deep forest. The great person understands the early indications.",
+        "4": "Riding a horse in a united, orderly formation. Seeking union and harmony. To proceed is auspicious. Nothing is unfavourable.",
+        "5": "Difficulty or prosperity. Smallest effort brings good fortune. Large effort brings harm.",
+        "6": "Riding a horse but stopping and turning back. Weeping tears of blood."
+      }
+    },
+    "4": {
+      "url": "https://www.youtube.com/watch?v=-RHTlJYj2ZM",
+      "title": "Hexagram 4",
+      "lines": {
+        "1": "Ignorance awakened brings movement. It is favourable to apply firm correction. If the shackles are removed, to press further brings regret.",
+        "2": "To embrace the beginner brings good fortune. Taking a wife brings good fortune. The son can manage the household.",
+        "3": "Do not take the woman. She sees a man of gold, she loses herself, no benefit anywhere.",
+        "4": "Inexperience is blocked. There will be reasons for regret.",
+        "5": "Inexperience of young child. Good fortune.",
+        "6": "Attack of inexperienced, it does no good to commit a violation. The idea is to prevent a violation."
+      }
+    },
+    "5": {
+      "url": "https://www.youtube.com/watch?v=EvLHRTpX2PE",
+      "title": "Hexagram 5",
+      "lines": {
+        "1": "Waiting at the suburbs. It is beneficial to remain in place. The is no error in this.",
+        "2": "The second line shows one waiting by the sands; a few words arise—ultimately good fortune.",
+        "3": "The third line shows one waiting in the mud; bandits arrive.",
+        "4": "Waiting in blood; emerging from the pit.",
+        "5": "The fifth line shows one waiting with wine and food; correct perseverance brings good fortune.",
+        "6": "Entering the cave; three unexpected guests arrive—honor them, and it ends well."
+      }
+    },
+    "6": {
+      "url": "https://www.youtube.com/watch?v=x6HxpZhzVBE",
+      "title": "Hexagram 6",
+      "lines": {
+        "1": "Do not prolong the affair; minor words or complaints may arise, but in the end, good fortune comes.",
+        "2": "Unable to win the conflict. Return and withdraw. No harm will come to the three hundred families of your town.",
+        "3": "To live on the virtue of one's ancestors (lit. to eat the old virtue). Persevering in this brings danger, but in the end, good fortune. If you should perhaps undertake the king's business, do not seek what is complete.",
+        "4": "Unable to win the conflict. Return and accept your fate. Change your approach, remain calm and upright—then, good fortune.",
+        "5": "Conflict. There will profound good result.",
+        "6": "Some may award him a leather belt (a symbol of honor), but by the end of the morning it is taken away three times."
+      }
+    },
+    "7": {
+      "url": "https://www.youtube.com/watch?v=T04456FSh20",
+      "title": "Hexagram 7",
+      "lines": {
+        "1": "At the beginning, the force moves in accordance to orders received. If discipline is lacking, misfortune follows",
+        "2": "Remaining at the centre of the military force — good fortune, without error. The king thrice bestows commands",
+        "3": "The army wagon carries corpses. Misfortune",
+        "4": "The army positions itself on the flank, not launching a frontal attack. No blame",
+        "5": "There are birds in the field. It is beneficial to speak honestly. No blame. The elder son leads the army; the younger carries corpses. Persevering in the wrong way brings misfortune",
+        "6": "The great leader issues commands, founding states and securing families. Do not rely on the small-minded."
+      }
+    },
+    "8": {
+      "url": "https://www.youtube.com/watch?v=ZEY_DafLTc0",
+      "title": "Hexagram 8",
+      "lines": {
+        "1": "Trusting union with others brings no fault. Full trust fills the jar to the brim; in the end, it brings further good fortune",
+        "2": "Union from within, trusting your direction leads to good fortune",
+        "3": "Hold together with the wrong people.",
+        "4": "Hold together outwardly. Perseverance brings good fortune.",
+        "5": "A sign of holding together. The king uses the three drives for his hunt. He lets the animals escape. The citizens need no warning. Good fortune.",
+        "6": "Seeking union but finding no leader brings misfortune."
+      }
+    },
+    "9": {
+      "url": "https://www.youtube.com/watch?v=Wi8yT97BMyM",
+      "title": "Hexagram 9",
+      "lines": {
+        "1": "Returning to one’s path—what fault is there? Good fortune.",
+        "2": "He is pulled back to the right path. Good fortune.",
+        "3": "The wheel spokes of the cart are loose. Husband and wife turn against each other.",
+        "4": "There is heartfelt trust. Peril goes away and fear dissolves. There will be no fault.",
+        "5": "Heartfelt trust that draws wealth from its neighbors.",
+        "6": "It has already rained, and water now settles. Trust is what supports. A woman’s correctness is dangerous. The moon is nearly full. To take action will leads to misfortune for the great person."
+      }
+    },
+    "10": {
+      "url": "https://www.youtube.com/watch?v=zxwceSX14_s",
+      "title": "Hexagram 10",
+      "lines": {
+        "1": "Step simply and humbly, and no harm will come.",
+        "2": "Walking the path in a smooth way. The person hiding in seclusion having confidence in his destiny finds good fortune.",
+        "3": "Though short-sighted, one can still see. Though lame, one can still tread. Tread on the tiger’s tail, and it will bite a person, causing harm. A warrior serves the great lord.",
+        "4": "Treading very cautiously on sensitive points of raw authority. Good fortune in the end.",
+        "5": "Stepping boldly, but with heart aligned. In peril, the upright path can be stabile.",
+        "6": "Looking at own conduct examining intentions. Your path turns inward and is true — you walk in blessing."
+      }
+    },
+    "11": {
+      "url": "https://www.youtube.com/watch?v=hHze2b6Qnmk",
+      "title": "Hexagram 11",
+      "lines": {
+        "1": "Grass is pulled up together with its roots. This is because of their unity. Going forward is auspicious.",
+        "2": "Embrace wilderness (lit. \"embrace desolation or unrefined\"), wade through rivers, not forsaking the distant when friends are gone, thus reach completion through highest moderation.",
+        "3": "No evenness without slope, no going without returning, difficulty and stability are without error. Do not worry where there is trust. Life sustenance is blessing.",
+        "4": "Free like a bird, without riches - employing his neighbour, not vigilant but trusting unfolding",
+        "5": "The Emperor Yi marries off his daughter. This leads to great fortune and supreme favor",
+        "6": "The city turns into a moat. Do not use the army. Orders arise from within the city itself. Persistence brings distress"
+      }
+    },
+    "12": {
+      "url": "https://www.youtube.com/watch?v=1juEQItMAlc",
+      "title": "Hexagram 12",
+      "lines": {
+        "1": "Pulling out grass along with its roots as they come together. Honest holding to your direction brings good fortune and success.",
+        "2": "Enclose trap and bear the burden. The petty person finds good fortune, the great one is blocked. Yet smooth progress comes.",
+        "3": "Containing shame",
+        "4": "Align with the higher principle; this is without error. Those who are aligned share blessings",
+        "5": "The end of stagnation. For the great person, good fortune. It is really gone! It is now natural like a mulberry tree.",
+        "6": "Stagnation collapses. First there is stagnation, then comes joy."
+      }
+    },
+    "13": {
+      "url": "https://www.youtube.com/watch?v=PYU9frQeMyc",
+      "title": "Hexagram 13",
+      "lines": {
+        "1": "Fellowship at the gate. No blame. Alternative translation: “At the threshold of alignment. There is no blame.”",
+        "2": "Focusing on intimate or close relations – not yet broad fellowship; still limited.",
+        "3": "Weapons are hidden in the wild. One climbs the high hill. For three years, nothing arises.",
+        "4": "He climbs up on his defences; strongly refuses to fight the attack. Good fortune.",
+        "5": "Fellowship with men. First there is weeping and wailing, then laughter comes. The great leader succeeds in meeting others.",
+        "6": "Union with people in the open fields. No regret."
+      }
+    },
+    "14": {
+      "url": "https://www.youtube.com/watch?v=BqCO-s-Anjg",
+      "title": "Hexagram 14",
+      "lines": {
+        "1": "Meeting it cannot bring harm, because there is no error; even if the situation feels hard, there can be nothing wrong.",
+        "2": "The great cart carries, there is destination, this is without error.",
+        "3": "The noble person offers his life to his life’s purpose (lit. to the highest authority). The small-minded cannot do this.",
+        "4": "Avoid arrogance, no blame.",
+        "5": "One is truthful in connecting and dignified; good fortune.",
+        "6": "Help comes from Heaven, the Creative power that initiates all things. Everything is auspicious; nothing is unfavorable."
+      }
+    },
+    "15": {
+      "url": "https://www.youtube.com/watch?v=60bRPQOX8uc",
+      "title": "Hexagram 15",
+      "lines": {
+        "1": "Being moderate about moderation can be used to cross the great river. Great progress.",
+        "2": "Moderation speaks out. Integrity brings good fortune.",
+        "3": "In effort, not asserting oneself; the true person has an end. Auspicious.",
+        "4": "There is nothing that is not beneficial, when demonstrate true modesty",
+        "5": "Not enriching oneself and remaining aligned with neighbors; this allows undertaking a corrective campaign; nothing is unfavourable.",
+        "6": "Declare your modesty. Advantageous to lead an army to subdue towns and nations."
+      }
+    },
+    "16": {
+      "url": "https://www.youtube.com/watch?v=dMt35wAnavA",
+      "title": "Hexagram 16",
+      "lines": {
+        "1": "Screaming enthusiasm: misfortune.",
+        "2": "Firm like a rock. It does not last the day. Keeping to the own direction brings good fortune.",
+        "3": "Enthusiasm that looks upward – regret. Hesitation brings relief.",
+        "4": "Through true enthusiasm great gains are obtained. Do not doubt. Friends gather together like hair bound by a pin.",
+        "5": "Holding too tightly and grows sick, yet continues on.",
+        "6": "Mysterious enthusiasm, completion brings transformation. This is without fault."
+      }
+    },
+    "17": {
+      "url": "https://www.youtube.com/watch?v=eJvdZKzBG2c",
+      "title": "Hexagram 17",
+      "lines": {
+        "1": "The authorities have changed. Staying correct brings good fortune. Going out and engaging with others brings success.",
+        "2": "Attachment to the boy causes the loss of the nature man",
+        "3": "Connection with the mature man — the boy is lost. By continuing, what is desired is achieved.",
+        "4": "Following along brings gain. Remaining grounded and stable leads to misfortune. Have trust in your own Way and clarity will follow. What fault could be there?",
+        "5": "Trusting and aligning the highest goodness brings good fortune.",
+        "6": "One is bound to follow, then releasing the bound. By stopping at completion, there is culmination which may last without descending (lit. the king makes a sacrificial offering on the Western Mountain)."
+      }
+    },
+    "18": {
+      "url": "https://www.youtube.com/watch?v=N1q6P9i7xpE",
+      "title": "Hexagram 18",
+      "lines": {
+        "1": "Setting right what has been spoiled by the father - the late father is without blame. Ascending to good fortune.",
+        "2": "Setting right what has been spoiled by the mother. It is not permissible to be rigidly correct.",
+        "3": "Setting right what has been spoiled by the father. There will be a little remorse, but not a big error.",
+        "4": "Tolerating what has been spoiled by the father. If one proceeds like this, one will encounter humiliation.",
+        "5": "Setting right what has been spoiled by the father. It attracts praise, earns honor, and builds a good reputation.",
+        "6": "He does not serve external authority (lit. king and prince). He values higher matters."
+      }
+    },
+    "19": {
+      "url": "https://www.youtube.com/watch?v=qYLUl-VewoY",
+      "title": "Hexagram 19",
+      "lines": {
+        "1": "Heart-felt approach. Dwelling in abundance brings good fortune.",
+        "2": "Heart-felt approach. Good fortune, nothing not beneficial.",
+        "3": "Approaching joyfully. Yet there may still remain worry that this will not last. But there will be no fault.",
+        "4": "Approach that has reached the complete stage, it's without error.",
+        "5": "Wisdom approaching that of the great ruler's. Good fortune.",
+        "6": "Stable approach. Good fortune without error."
+      }
+    },
+    "20": {
+      "url": "https://www.youtube.com/watch?v=oxdkwHpsNgk",
+      "title": "Hexagram 20",
+      "lines": {
+        "1": "Crude, immature observation. For an inferior man, no blame. For a superior man, humiliation",
+        "2": "Peeping through a crack — partial, limited insight.",
+        "3": "Observation, progress and retreat.",
+        "4": "Observing the light of the kingdom — the sage’s broad perspective.",
+        "5": "Observing one’s own conduct — self-reflection of a leader.",
+        "6": "Observing one's life, the noble one has no fault."
+      }
+    },
+    "21": {
+      "url": "https://www.youtube.com/watch?v=34zCeI4UqSI",
+      "title": "Hexagram 21",
+      "lines": {
+        "1": "The foot-stocks destroy/cover the toes. No fault.",
+        "2": "Bites through tender meat.",
+        "3": "Bites on dried meat. Encounters poison. Small humiliation.",
+        "4": "Biting into dried, sinewy meat (gristle). Obtains a metal arrow. Favorable to remain constant through difficulty. Good fortune.",
+        "5": "Bites on dried meat. Gets yellow gold. Perseverance brings danger.",
+        "6": "Bearing the cangue that covers the ears. Disaster."
+      }
+    },
+    "22": {
+      "url": "https://www.youtube.com/watch?v=jgCHc0E3btQ",
+      "title": "Hexagram 22",
+      "lines": {
+        "1": "Grace adorns the toes; abandoning the carriage, one goes on foot",
+        "2": "Grace adorns the beard",
+        "3": "Grace that is dew-covered — this natural, enduring alignment brings good fortune.",
+        "4": "Grace like whiteness, like a white horse with plume; not a bandit, but one coming to wed",
+        "5": "Graceful adornment in the hill garden, with but a scant bundle of silk; regret, yet ultimately auspicious",
+        "6": "White grace. There is no error in this."
+      }
+    },
+    "23": {
+      "url": "https://www.youtube.com/watch?v=OCtqmPxsao0",
+      "title": "Hexagram 23",
+      "lines": {
+        "1": "Splitting the bed at the foot. Losing your soul (undermining the upright fulness) brings misfortune",
+        "2": "Splitting the bed at the frame. Losing your soul (undermining the upright fulness) brings misfortune",
+        "3": "Removing what covers is without fault",
+        "4": "Splitting the bed at the skin brings misfortune",
+        "5": "Stringing fish in order. Thanks to the favor of court attendants, nothing is unfavorable",
+        "6": "The large fruit remains uneaten. The noble person receives support to move forward — if small-minded, one loses shelter"
+      }
+    },
+    "24": {
+      "url": "https://www.youtube.com/watch?v=4BQ5dvs1Xm8",
+      "title": "Hexagram 24",
+      "lines": {
+        "1": "Returning from not far. No need for regret. Great good fortune.",
+        "2": "Quiet return. Good fortune.",
+        "3": "Repeatedly returning. There is danger, but no error",
+        "4": "Coming to the centre, returning to oneself.",
+        "5": "Quiet, grounded (lit. thick) return. No regret.",
+        "6": "Deluded return. Misfortune. Natural disasters and military defeat. Persistent error leads to loss."
+      }
+    },
+    "25": {
+      "url": "https://www.youtube.com/watch?v=jiaflTKOo00",
+      "title": "Hexagram 25",
+      "lines": {
+        "1": "Undeluded is what brings good fortune.",
+        "2": "Without plowing or sowing, one still reaps; without preparing the field, there is benefit in moving forward.",
+        "3": "Undeluded about loss. Someone ties an ox. A traveling tradesman gains, a townsman losses.",
+        "4": "It is permissible to keep the direction, there is no fault.",
+        "5": "Undeluded deals with a problem. Do not correct it — there will be joy.",
+        "6": "Undeluded. To move forward brings error. Aimlessness gives a favourable outcome."
+      }
+    },
+    "26": {
+      "url": "https://www.youtube.com/watch?v=ZLZcglSFmGU",
+      "title": "Hexagram 26",
+      "lines": {
+        "1": "There is harsh strictness, favorable to temper oneself.",
+        "2": "The carriage’s yoke/strap is set so the wheel fits.",
+        "3": "Noble action in pursuit. Challenging integrity brings benefit. It is said: restrain the carriage and guard well. Favorable to remain clear about your direction.",
+        "4": "A young ox with a yoke, brings great good fortune.",
+        "5": "The tusk of a castrated boar. Auspicious.",
+        "6": "Following the originating power (lit. heaven), smooth."
+      }
+    },
+    "27": {
+      "url": "https://www.youtube.com/watch?v=nfaVXtxL5iA",
+      "title": "Hexagram 27",
+      "lines": {
+        "1": "Abandoning the wisdom you sought, and seeking nourishment for someone else, brings harm.",
+        "2": "Reverse how you nourish yourself, and go against the norm. Seeking the external nourishment brings misfortune.",
+        "3": "To go against nourishment in order to remain faithful brings misfortune. For ten years, do not act; there is no benefit in it at all.",
+        "4": "Looking down on nourishment brings good fortune. Like a tiger watching, eager to pursue. This is without fault.",
+        "5": "Going against the norm. Holding inner alignment brings good fortune. Do not cross the great river.",
+        "6": "Acting from true nourishment: though there is danger, there is good fortune. It is favorable to cross the great river."
+      }
+    },
+    "28": {
+      "url": "https://www.youtube.com/watch?v=k06MedwYky8",
+      "title": "Hexagram 28",
+      "lines": {
+        "1": "Placed upon white reed grass. No blame.",
+        "2": "A withered poplar grows new shoots. An old husband receives his wife. Nothing that would not bring benefit.",
+        "3": "The ridgepole is weak and bends (as if under pressure). This is misfortune.",
+        "4": "The ridgepole rises/is strong and prosperous. Good fortune. If there is something else (alternative), regret.",
+        "5": "The withered poplar produces blossoms. An old woman marries an official as a husband. No fault, no fame.",
+        "6": "Going too far in fording. The water covers the head. Misfortune. No blame."
+      }
+    },
+    "29": {
+      "url": "https://www.youtube.com/watch?v=yQo_s6X0JCw",
+      "title": "Hexagram 29",
+      "lines": {
+        "1": "Repeating danger you drop into an even deeper pit. Misfortune follows.",
+        "2": "Danger lies in the pit. Seek the small to find your way forward.",
+        "3": "Entering pit after pit. Danger as if the pillow beneath your head. Entering the hollow brings trouble. Do not act.",
+        "4": "Offer a jar of wine and two bowls in a simple clay pot through the window; no blame in the end",
+        "5": "The pit is not full, the surface is level, no misfortune.",
+        "6": "Bound with fine cords and thrown into thorn-bushes; three years without escape; misfortune."
+      }
+    },
+    "30": {
+      "url": "https://www.youtube.com/watch?v=M-GxRx6Idy8",
+      "title": "Hexagram 30",
+      "lines": {
+        "1": "Confused footsteps. One honors him.",
+        "2": "Yellow light. Great good fortune.",
+        "3": "In the light of the setting sun, one beats a clay jar and sings. This is the sound of old age. Misfortune.",
+        "4": "Suddenly comes the burning. Death. Rejection.",
+        "5": "Tears flow in torrents. Sighing in grief. Good fortune.",
+        "6": "The king uses him to go forth and chastise. Then it is right to cut off the leaders, but do not capture their followers. No error."
+      }
+    },
+    "31": {
+      "url": "https://www.youtube.com/watch?v=5Vx-1FdAqZw",
+      "title": "Hexagram 31",
+      "lines": {
+        "1": "Influence at the toes.",
+        "2": "Influence at the calves. Misfortune. Staying still brings good fortune.",
+        "3": "Influence reaches the thighs. Acting from raw instinct or clinging too tightly to desire leads to trouble.",
+        "4": "Remaining true to one's way brings good fortune. Regret fades away; nothing to worry about. Eagerly longing, interacting back and forth. Your desires follow willfully.",
+        "5": "Influence at the flesh of the back. No regret.",
+        "6": "Influence in the cheeks, jaw, and tongue."
+      }
+    },
+    "32": {
+      "url": "https://www.youtube.com/watch?v=VZtsixkuTGI",
+      "title": "Hexagram 32",
+      "lines": {
+        "1": "Too intense in persistence. Continuing steadily is misfortune. There is no benefit at all.",
+        "2": "Regret disappears",
+        "3": "One who does not persist in virtue may bring shame. Even with correct intentions, there is regret.",
+        "4": "In the field, no game is caught.",
+        "5": "Follow your heart. Holding to the rules brings good fortune to the woman, but misfortune to the man.",
+        "6": "Someone does not stay constant in following the heart, and instead bears shame. Though he was right at first, regret still follows."
+      }
+    },
+    "33": {
+      "url": "https://www.youtube.com/watch?v=DsQYYXnAKhQ",
+      "title": "Hexagram 33",
+      "lines": {
+        "1": "Withdrawing before the end. Danger to initiate anything.",
+        "2": "To fix it, use the hide of a yellow ox. No one can undo it.",
+        "3": "Retreating with entanglements. There is distress and danger. It is fortunate to keep servants and concubines.",
+        "4": "A proper retreat. The noble one finds good fortune; the petty one does not.",
+        "5": "An admirable retreat. Trusting your direction brings good fortune.",
+        "6": "A full and well-prepared retreat. Nothing is unfavorable."
+      }
+    },
+    "34": {
+      "url": "https://www.youtube.com/watch?v=e5UAH0kwWbI",
+      "title": "Hexagram 34",
+      "lines": {
+        "1": "Eager to advance. There will be evil",
+        "2": "Reaming grounded and aligned brings good fortune",
+        "3": "The small person applies forceful action. The noble person avoids getting caught in action (or \"uses restrained\"). Holding ti correctness brings difficulties (or danger). The sheep butts the fence. Its horns get entangled",
+        "4": "Remaining aligned, good fortune comes. Doubt falls away. The fence opens—nothing is caught. Strength holds the load and lets the way unfold",
+        "5": "The ram loses its impulsive nature (symbolized by losing a toe or the urge to butt) — great good fortune",
+        "6": "The ram butts against the fence unable to retreat or proceed. No direction is beneficial. Accept the difficulty—then comes good fortune"
+      }
+    },
+    "35": {
+      "url": "https://www.youtube.com/watch?v=WNlTQT3Ta0U",
+      "title": "Hexagram 35",
+      "lines": {
+        "1": "Progressing and returning (lit. \"advancing, yet blocked\"). Remaining grounded (abiding in stability) is auspicious. There is no trust. If you are relaxed and spacious, there is no error.",
+        "2": "Progressing, but with sorrow. Holding firm is fortunate. Great blessing is received, as if from the ancestral queen.",
+        "3": "All endorse—regret disappears.",
+        "4": "Advancing like a mole rat. Constancy leads to danger.",
+        "5": "Give up regret (or \"give up doubts\", also/lit. \"misgiving vanish\"). Don’t worry about loss or gain. Continuing brings good fortune. Nothing is unfavorable.",
+        "6": "Progressing with horns. Used to attack a city. Danger brings fortune. No blame—but persistence brings regret."
+      }
+    },
+    "36": {
+      "url": "https://www.youtube.com/watch?v=eB3Xcxbb5iY",
+      "title": "Hexagram 36",
+      "lines": {
+        "1": "Darkening of the light during flight. Lowers wings. The noble person refrains from eating for three days. On the road, there is a place to go. The host speaks of this.",
+        "2": "Light is obscured, left thigh (ability to transform) is injured. Use of strong horses brings good fortune.",
+        "3": "Brightness is hidden. While conquering in the south, the great leader is captured. Yet it is not advisable to hastily set things right.",
+        "4": "Darkening of the light enters the left belly. Obtains the mind of darkness’s gate. Goes out and leaves the courtyard gate.",
+        "5": "Like Ji Zi in times of darkened light: it is beneficial to remain steadfast.",
+        "6": "What hides brightness first rises to heaven, then it descends to the earth."
+      }
+    },
+    "37": {
+      "url": "https://www.youtube.com/watch?v=ZNAPmXIgIPo",
+      "title": "Hexagram 37",
+      "lines": {
+        "1": "A wooden bolt across the gate of a household. Regret vanishes.",
+        "2": "There should be no personal agenda to pursue, just to be in the center, providing food. Remaining aligned brings good fortune.",
+        "6": "Trusting therefore dignified. Finally good fortune."
+      }
+    },
+    "38": {
+      "url": "https://www.youtube.com/watch?v=pVtW17HWSvs",
+      "title": "Hexagram 38",
+      "lines": {
+        "1": "Regret disappears. Lose the horse — do not chase it, it will return. Even harshness does not bring error.",
+        "2": "Meeting the ruling principle.",
+        "3": "One sees the cart dragged back, the ox checked. The person is branded on the forehead and has the nose cut off. No beginning, but an outcome.",
+        "4": "Though isolated in opposition, you meet a wise individual. Trust is established. There may be difficulty, but there is no error.",
+        "5": "Regret disappears. His ancestor bites the skin. What misfortune is there in going?",
+        "6": "Opposition and isolation. Sees a pig covered with mud, one is heavy with fears, and projections. First, pulls the bow. Then, the bow is put aside. This is not a bandit, but a union. Go through the rain, there will be good fortune."
+      }
+    },
+    "39": {
+      "url": "https://www.youtube.com/watch?v=Ue7mv7FuzXc",
+      "title": "Hexagram 39",
+      "lines": {
+        "1": "Going forward brings crippling obstruction; Returning brings praise.",
+        "2": "The king’s minister meets obstruction upon obstruction. It is not for his own sake.",
+        "3": "Moving forward in obstruction, coming back is opposed.",
+        "4": "Going brings obstruction, staying is unity.",
+        "5": "In great obstruction, friends arrive.",
+        "6": "Through going through difficulty, fullness can return. This brings good fortune. Great for the noble person to show up."
+      }
+    },
+    "40": {
+      "url": "https://www.youtube.com/watch?v=ptB50BMLd-Q",
+      "title": "Hexagram 40",
+      "lines": {
+        "1": "There is no fault.",
+        "2": "In the field, one captures three foxes; gains yellow arrows. Keeping the right direction brings good fortune.",
+        "3": "Carrying a burden while riding in comfort. This invites robbers. Even with correct intent, the outcome is strained.",
+        "4": "Release your thumb (or \"big toe\"). Companions arrive. Then there is trust.",
+        "5": "The bondage of the Superior Man is released. Auspicious. He has trust toward the smallness in people.",
+        "6": "The noble one shoots a falcon on top of the high wall. He captures it—there is nothing unfavorable."
+      }
+    },
+    "41": {
+      "url": "https://www.youtube.com/watch?v=ylt9RPEwv6E",
+      "title": "Hexagram 41",
+      "lines": {
+        "1": "It has been done. Don’t delay. There is no fault. Let go of it.",
+        "2": "Remaining correct is beneficial. To go somewhere brings misfortune. Without giving away, you are able to bring increase.",
+        "3": "Three people travel together, and one person must leave. One of them goes alone, and gains an ally.",
+        "4": "Reducing the illness/defect makes joy come swiftly. There is no error.",
+        "5": "Someone benefits it; the tortoise shells of ten friends do not disobey; great good fortune.",
+        "6": "Not decreasing is to increase it. This is without any error. Remaining grounded abiding in fullness is auspicious. Staying aligned while attracting fully devoted attendants (without home or family)."
+      }
+    },
+    "42": {
+      "url": "https://www.youtube.com/watch?v=KXVOw6VIVkY",
+      "title": "Hexagram 42",
+      "lines": {
+        "1": "It is beneficial to undertake a great task. Supreme good fortune, there is no error.",
+        "2": "Someone bestows upon you a tortoise worth ten pairs of cowries, and you cannot refuse it. Lasting perseverance brings good fortune. The King uses it to make offerings to the Highest Divinity.",
+        "3": "Being increased by unfortunate events is without error. Having inner sincerity / truthfulness and walking the middle path, announce it to the ruler, using your jade scepter",
+        "4": "Centered action. Report to the ruler, and he will follow. It is favorable to establish a foundation for moving the state",
+        "5": "Having true kindness in the heart; do not aske about it; supreme good fortune. My truly kind heart is rewarded with increase"
+      }
+    },
+    "43": {
+      "url": "https://www.youtube.com/watch?v=C1ZSYPhzWEU",
+      "title": "Hexagram 43",
+      "lines": {
+        "1": "Strong at the front toes (forceful beginning). Going forward without capacity leads to blame.",
+        "2": "Be vigilant and raise the alarm. At night there is danger of conflict. Do not be anxious.",
+        "3": "Strong on the cheekbones—misfortune follows. The noble one is firm and decisive. He walks alone, if goes goes through rain, there is frustration but no fault.",
+        "4": "The buttocks have no skin. The movement is halting and hesitant. Let the sheep be pulled and regret will disappear. These words are heard but not believed.",
+        "5": "Creeping plant on earth required true resolution. Alignment with your direction is without blame.",
+        "6": "No warning is given. In the end, it leads to disaster."
+      }
+    },
+    "44": {
+      "url": "https://www.youtube.com/watch?v=jgRKgX3tvHY",
+      "title": "Hexagram 44",
+      "lines": {
+        "1": "Tied to a metal brake. Being upright brings good fortune. If one goes somewhere, will see misfortune. A weak pig trusts but hesitates.",
+        "2": "Holding a bag with fish inside. This is not a mistake. It's not favourable to share it.",
+        "3": "The hips have no skin. One moves hesitantly and awkwardly. There is trouble. This is not a great disaster.",
+        "4": "The bag hides no fish. Rising up [in this situation] brings misfortune.",
+        "5": "Wrapping a melon while full of unnecessary worries. Something falls from heaven.",
+        "6": "Encountering with his horns. Regret, but no blame."
+      }
+    },
+    "45": {
+      "url": "https://www.youtube.com/watch?v=9Y6v6-FwFYw",
+      "title": "Hexagram 45",
+      "lines": {
+        "1": "There is confidence, but it does not last. Chaos returns, then gathering again. If one cries out and grasps it, this turns into laughter. To go forward is without fault.",
+        "2": "Leading to auspiciousness (or extremely auspicious) and without error. A small offering, given in good faith, brings benefit.",
+        "3": "The heart wants to gather, but the time resists. Proceed gently. There is no harm, though you may sigh",
+        "4": "Great good outcome, there is no error",
+        "5": "Right position brings gathering. If there is no trust, great and lasting integrity is the right path",
+        "6": "Sighing and groaning, tears and snivel—no fault."
+      }
+    },
+    "46": {
+      "url": "https://www.youtube.com/watch?v=u8bP3eOFK_k",
+      "title": "Hexagram 46",
+      "lines": {
+        "1": "Truly welcomed ascending. Great good fortune follows.",
+        "2": "if you are trustworthy, even small offering brings good fortune.",
+        "3": "Ascending into an empty city",
+        "4": "The king performs a sacrifice at Mount Qi. Auspicious and without fault",
+        "5": "Remaining aligned: good fortune, and ascending the steps.",
+        "6": "Rising into darkness. It is favorable to persist with unwavering integrity."
+      }
+    },
+    "47": {
+      "url": "https://www.youtube.com/watch?v=uFzXKDmcRVE",
+      "title": "Hexagram 47",
+      "lines": {
+        "1": "Oppression from the start — you sit under a bare tree, isolated. Dangerous to move; better to stay still and endure quietly.",
+        "2": "Engaged is enjoying wine and food, while the red sash (symbol of authority) is just about due to arrive. It is beneficial to make offerings. To depart from this brings misfortune. There will be no error.",
+        "3": "Trapped by a rock and grasping thorns. He enters his home but does not notice his wife there. This is a trouble.",
+        "4": "Coming slowly, very slowly. Oppressed by a valuable metal cart. These is a regret, but there is an end.",
+        "5": "Nose and feet are cut off. Oppressed in red robes. Then, gradually, there is relief and joy. It is beneficial to make offerings.",
+        "6": "Trapped by vines and creepers, in a shaky, precarious place. It says: \"Movement brings regret.\" Having regret, to advance is fortunate"
+      }
+    },
+    "48": {
+      "url": "https://www.youtube.com/watch?v=p2WLFz3Pdv4",
+      "title": "Hexagram 48",
+      "lines": {
+        "1": "Muddy water in the well. Not fit to drink. No birds come to the old well.",
+        "2": "The well is in a valley. Shooting at small fish. The jar is damaged and leaking.",
+        "3": "The well has been cleared. It is not used, the heart is in sorrows. It can be used, the highest wisdom (lit. also \"the king is wise\") can benefit many with its blessings.",
+        "4": "The well is lined with bricks. No blame.",
+        "5": "The well is clear and pure. Cold spring water is drunk.",
+        "6": "The well is covered, but not concealed. With sincerity, great good fortune."
+      }
+    },
+    "49": {
+      "url": "https://www.youtube.com/watch?v=BKud1bKDMns",
+      "title": "Hexagram 49",
+      "lines": {
+        "3": "Taking action brings harm. Even aligning with the heart is dangerous. Change has been discussed three times. Hold to trust."
+      }
+    },
+    "50": {
+      "url": "https://www.youtube.com/watch?v=hCHpl4hX534",
+      "title": "Hexagram 50",
+      "lines": {
+        "1": "The cauldron is overturned. Throw out old residue.",
+        "2": "The cauldron is full. Resistance cannot stop me; what is not mine does not approach. This is good fortune.",
+        "3": "The cauldron’s handles are altered / removed. Its movement is blocked. The rich food is not eaten. Rain begins to fall. Regret diminished. In the end, good fortune.",
+        "4": "The legs are broken; the food spills.",
+        "5": "The cauldron has yellow handles and golden rings. Auspicious.",
+        "6": "The cauldron has a jade handle. Great good fortune. Nothing is not beneficial."
+      }
+    },
+    "51": {
+      "url": "https://www.youtube.com/watch?v=vhXoRjuigMg",
+      "title": "Hexagram 51",
+      "lines": {
+        "1": "When shock/thunder comes, trembling with awe; afterward, laughing and talking — auspicious.",
+        "2": "Harsh shock arrives. Suddenly wealth can be lost. Climb high grounds and do not chase what is lost. It will all be returned in seven days.",
+        "3": "Thunder shakes and revives. One moves, and there is no fault.",
+        "4": "Shock continues bringing entanglements.",
+        "5": "Sever shock coming and going. But there is not much loss. Duty must be carried out.",
+        "6": "Trembling and anxious. Eyes darting in fear. To advance brings misfortune."
+      }
+    },
+    "52": {
+      "url": "https://www.youtube.com/watch?v=sZoFtQx7mrE",
+      "title": "Hexagram 52",
+      "lines": {
+        "1": "Stopping his feet — stop before starting the wrong path.",
+        "2": "Stopping his calves — no rescue; don't follow others' restless energy.",
+        "3": "Stopping his hips — dangerous straining; forced action creates regret.",
+        "4": "Keeping the body still — this is faultless.",
+        "5": "Still the cheekbones; let words be measured and timely — regret fades.",
+        "6": "Trust in stillness — good fortune"
+      }
+    },
+    "53": {
+      "url": "https://www.youtube.com/watch?v=JS7RvHx4S7o",
+      "title": "Hexagram 53",
+      "lines": {
+        "1": "The wild goose gradually approaches the riverbank. The young one is in danger. There is talk. There is no fault.",
+        "2": "The wild goose approaches a rock. There is joyful eating and drinking. Good fortune.",
+        "3": "The wild goose gradually approaches dry land. The man marches (joins a military campaign) but does not return. The woman gets pregnant but does not nurture the child (or give birth). This is misfortune. It's beneficial to defend from the invaders.",
+        "4": "The wild goose gradually draws near the tree. It may find a flat branch, there will be not error.",
+        "5": "The wild goose gradually draws near the summit. For three years the wife has no child. In the end nothing can thwart her. Good fortune.",
+        "6": "The wild geese gradually approach the cloud heights. Their feathers can be used in the sacred dance. Good fortune."
+      }
+    },
+    "54": {
+      "url": "https://www.youtube.com/watch?v=rgYvlOoKNeI",
+      "title": "Hexagram 54",
+      "lines": {
+        "1": "Young Maiden marries as a concubine. Though she is crippled, she can walk. To take action brings good fortune.",
+        "2": "Though partially blind, one is able to see. Good fortune comes from staying true to the path of the withdrawn person.",
+        "3": "The marrying maiden acts like a slave. She marries but leaves.",
+        "4": "The marrying maiden returns home after missing the appointed time for marriage.",
+        "5": "The Emperor gives away his daughter. The wedding robe is not as fine as the everyday clothes. The moon is nearly full. Good fortune.",
+        "6": "The woman holds a basket, but there is nothing in it. The man sacrifices a sheep, but there is no blood. No advantage."
+      }
+    },
+    "55": {
+      "url": "https://www.youtube.com/watch?v=gFZ4FUbXFek",
+      "title": "Hexagram 55",
+      "lines": {
+        "1": "Meeting his proper match. Though equal, there is no harm. Going forward brings respect.",
+        "2": "The curtain is so abundant that at midday one can see the North Star. Going forward brings suspicion and illness. If one is sincere, it will be like the bright sun at noon.",
+        "3": "The underbrush is abundant. At midday one sees small stars. Break your right arm. No harm.",
+        "4": "The curtain is abundant. At midday one sees the Dipper. Meeting one’s equal master. Good fortune",
+        "5": "Lines of brilliance come. Congratulations and honour are there. Good fortune.",
+        "6": "His house is in abundance. He screens his family. Peering through the gate, he sees no one for three years. Misfortune."
+      }
+    },
+    "56": {
+      "url": "https://www.youtube.com/watch?v=Ltzp5nQVo54",
+      "title": "Hexagram 56",
+      "lines": {
+        "1": "The traveller is petty and small-minded. Thus, this is what brings misfortune upon him.",
+        "2": "The traveller comes to an inn (a stopping place). He cherishes his resources in his bosom. He obtains loyal young servants.",
+        "3": "The traveller burns his inn, and loses his loyal young servants. Persistence in this leads to danger.",
+        "4": "The traveller is at a makeshift dwelling. He obtains his resources and an axe. But in my heart, I am not at ease.",
+        "5": "He shoots a pheasant. He loses one arrow. In the end, this leads to praise and an appointment.",
+        "6": "The bird burns its own nest. The traveler first laughs and then wails. He loses his ox in the borderlands/carelessly. Misfortune."
+      }
+    },
+    "57": {
+      "url": "https://www.youtube.com/watch?v=3AYWu_X6koM",
+      "title": "Hexagram 57",
+      "lines": {
+        "1": "Advancing and retreating. It benefits to abide in stability like a warrior",
+        "2": "Penetration is under the bed, use historians and visionaries when it appears tangled. This is auspicious and without error",
+        "3": "Urgent and frequent penetration brings regret",
+        "4": "Regret is gone. In the field, one catches three kinds of game",
+        "5": "Aligning with good fortune, remorse is gone. Nothing that does not further. No beginning, but an end. Before the Geng day, three days; after the Geng day, three days. Good fortune",
+        "6": "The gently penetrating what is subtle under the bed. He loses his axe. Remaining brings misfortune"
+      }
+    },
+    "58": {
+      "url": "https://www.youtube.com/watch?v=n9PLd7501vw",
+      "title": "Hexagram 58",
+      "lines": {
+        "1": "There is good joy, good fortune",
+        "2": "Trusting joy brings good fortune; regret disappears.",
+        "3": "Joy that comes from outside. Ominous.",
+        "4": "Joy that is hesitant. Not yet settled. There will be cause for joy.",
+        "5": "Trust in what is eroded. Dangerous, but no mistake.",
+        "6": "Leading others into joy."
+      }
+    },
+    "59": {
+      "url": "https://www.youtube.com/watch?v=-mQHrmHt0t4",
+      "title": "Hexagram 59",
+      "lines": {
+        "1": "Rescue with the aid of a strong horse—good fortune.",
+        "2": "In dispersion, make a sudden change of direction. There will be no place for regret.",
+        "3": "The third line shows one discarding all self-concern—there is no occasion for repentance.",
+        "4": "Scattering own flock brings prime good fortune. Scattering has it's mound (newfound center) this is beyond ordinary thought.",
+        "5": "The grand proclamation dissolves the sweat of effort; rigid rule dissolves as well. This is without error.",
+        "6": "He disperses his wounds, departs far, and exits. Without fault."
+      }
+    },
+    "60": {
+      "url": "https://www.youtube.com/watch?v=XoCf9Ks3vUM",
+      "title": "Hexagram 60",
+      "lines": {
+        "1": "Not going beyond the gate and courtyard is without error.",
+        "2": "Not going beyond the gate and courtyard — misfortune.",
+        "3": "If one fails to practice boundaries, there will be regret. Yet there is no error.",
+        "4": "Keeping boundaries with ease and stability. Success.",
+        "5": "Pleasant (or sweet) limitations bring blessing. Moving forward is auspicious.",
+        "6": "Bitter limitation. Persisting in it brings misfortune. Letting go removes regret."
+      }
+    },
+    "61": {
+      "url": "https://www.youtube.com/watch?v=hTm2hilPt9g",
+      "title": "Hexagram 61",
+      "lines": {
+        "1": "Alertness is auspicious. The other (distraction or influence) brings no peace.",
+        "2": "The crane cries out from the shade, and its young one echoes back in harmony. 'I have fine wine vessels. I will share them with you'",
+        "3": "Encountering an opponent. Sometimes drum, sometimes stop. Sometimes weep, sometimes sing",
+        "4": "The moon is nearly full. The horses are lost. No fault",
+        "5": "There is confidence which is like an invisible bond tying all together. This is without error",
+        "6": "Flying call rises to heaven. Being correct, brings misfortune."
+      }
+    },
+    "62": {
+      "url": "https://www.youtube.com/watch?v=zVu7rljQmJw",
+      "title": "Hexagram 62",
+      "lines": {
+        "1": "The bird flies and meets misfortune.",
+        "2": "Passing her ancestor, she meets her grandmother. He does not reach his lord; he meets his minister, no error.",
+        "3": "Not overdoing it, he who follows may be in danger.",
+        "4": "There is no fault - through not going too far; one meets. Going brings danger, must be cautious. Do not use constant uprightness.",
+        "5": "Thick clouds, but no rain, coming from the region to my west. The noble hunts and takes that in its hole.",
+        "6": "Not meeting it (overshooting), going beyond. The flying bird parts from it. Misfortune. This is called disaster and harm."
+      }
+    },
+    "63": {
+      "url": "https://www.youtube.com/watch?v=FDZccWeqcwY",
+      "title": "Hexagram 63",
+      "lines": {
+        "1": "Trailing the wheel, the tail gets moist. There is no error",
+        "2": "The woman loses her carriage curtain. Do not go after it. In seven days, you will get it",
+        "3": "The High Ancestor attacks the Land of Ghosts. Three years — he conquers it. The small person: do not employ.",
+        "4": "The finest clothes are tattered. Be cautious all day long.",
+        "5": "The eastern neighbor kills an ox, not like the western neighbor's spring offering. He receives the blessing.",
+        "6": "He gets his head wet. Danger."
+      }
+    },
+    "64": {
+      "url": "https://www.youtube.com/watch?v=EM4bBm9eUP4",
+      "title": "Hexagram 64",
+      "lines": {
+        "1": "He wets his tail—there is shame (or trouble).",
+        "2": "Dragging the wheels. Remaining true to your direction brings good fortune.",
+        "3": "Before completion. Advancing brings misfortune. Yet it is favorable to cross the great river.",
+        "4": "Remaining aligned with your path bears fruit. Worry and regrets are now gone. The thunder of Heaven has struck the land of demons. The three-year ordeal is complete and the great state bestows its rewards.",
+        "5": "True to one’s path in life — and therefore blessed. Nothing to regret. The noble person shines trusting his way. Good fortune.",
+        "6": "There is drinking wine with truthfulness; no blame. If he wets his head, trust is lost and this is a mistake."
+      }
+    }
+  }
+}

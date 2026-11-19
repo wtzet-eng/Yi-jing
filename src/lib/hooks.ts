@@ -32,29 +32,66 @@ export function useDarkMode() {
 }
 
 export function useServiceWorker() {
+  const [offlineReady, setOfflineReady] = useState(false);
+  const [offlineError, setOfflineError] = useState(false);
+  const [update, setUpdate] = useState<ServiceWorker | null>(null);
+
   useEffect(() => {
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker
-        .register("/sw.js")
-        .then((reg) => {
-          reg.update().catch(() => {});
-          // If updated sw is available, update it
-          reg.onupdatefound = () => {
-            const installing = reg.installing;
-            if (installing) {
-              installing.onstatechange = () => {
-                if (installing.state === "installed" && navigator.serviceWorker.controller) {
-                  console.log("New content available for offline use.");
-                }
-              };
-            }
-          };
-        })
-        .catch((err) => {
-          console.warn("Service Worker registration failed:", err);
+    if (!import.meta.env.PROD || !("serviceWorker" in navigator)) return;
+    let disposed = false;
+    let registration: ServiceWorkerRegistration | undefined;
+    const checkReady = () => {
+      const worker = navigator.serviceWorker.controller;
+      if (!worker) return;
+      const channel = new MessageChannel();
+      const timer = window.setTimeout(() => channel.port1.close(), 5000);
+      channel.port1.onmessage = event => {
+        clearTimeout(timer);
+        channel.port1.close();
+        if (!disposed) {
+          setOfflineReady(event.data?.ready === true);
+          setOfflineError(event.data?.ready !== true);
+        }
+      };
+      worker.postMessage({ type: "OFFLINE_STATUS" }, [channel.port2]);
+    };
+    const checkUpdate = () => {
+      checkReady();
+      registration?.update().catch(() => {});
+    };
+    navigator.serviceWorker.addEventListener("controllerchange", checkReady);
+    window.addEventListener("online", checkUpdate);
+    navigator.serviceWorker.register("/sw.js", { updateViaCache: "none" }).then(reg => {
+      if (disposed) return;
+      registration = reg;
+      if (reg.waiting) setUpdate(reg.waiting);
+      const observe = () => {
+        const worker = reg.installing;
+        if (!worker) return;
+        worker.addEventListener("statechange", () => {
+          if (disposed) return;
+          if (worker.state === "installed" && navigator.serviceWorker.controller) setUpdate(reg.waiting);
+          if (worker.state === "activated") checkReady();
+          if (worker.state === "redundant") setOfflineError(true);
         });
-    }
+      };
+      reg.addEventListener("updatefound", observe);
+      observe();
+      checkUpdate();
+    }).catch(() => { if (!disposed) setOfflineError(true); });
+    return () => {
+      disposed = true;
+      navigator.serviceWorker.removeEventListener("controllerchange", checkReady);
+      window.removeEventListener("online", checkUpdate);
+    };
   }, []);
+
+  const applyUpdate = () => {
+    if (!update) return;
+    navigator.serviceWorker.addEventListener("controllerchange", () => window.location.reload(), { once: true });
+    update.postMessage({ type: "SKIP_WAITING" });
+  };
+  return { offlineReady, offlineError, updateAvailable: Boolean(update), applyUpdate };
 }
 
 export function useOnlineStatus() {
